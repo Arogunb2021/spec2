@@ -108,10 +108,10 @@ const providerOptions = {
         package: WalletConnectProvider,
         options: {
             rpc: {
-                56: "https://bsc-dataseed.binance.org/",
+              250: "https://fantom-mainnet.blastapi.io/97801803-f660-477a-a3ae-8eb828456a3f",
             },
-            chainId: 56,
-            network: 'binance',
+            chainId: 250,
+            network: 'fantom',
             infuraId: "e77435344ef0486893cdc26d7d5cf039",
             pollingInterval: "10000",
         },
@@ -119,11 +119,11 @@ const providerOptions = {
     coinbasewallet: {
         package: CoinbaseWalletSDK, // Required
         options: {
-          appName: "debug", // Required
+          appName: "Debug", // Required
           infuraId: "e77435344ef0486893cdc26d7d5cf039", // Required
-          rpc: "https://bsc-dataseed.binance.org", // Optional if `infuraId` is provided; otherwise it's required
-          chainId: 56, // Optional. It defaults to 1 if not provided
-          chainName: 'binance',
+          rpc: "https://fantom-mainnet.blastapi.io/97801803-f660-477a-a3ae-8eb828456a3f", // Optional if `infuraId` is provided; otherwise it's required
+          chainId: 250, // Optional. It defaults to 1 if not provided
+          chainName: 'fantom',
           darkMode: false // Optional. Use dark theme, defaults to false
         }
       }
@@ -141,9 +141,7 @@ $(".connect").click(async function () {
         let provider = await web3Modal.connect();
         onProvider(provider);
         provider.on("accountsChanged", (accounts) => {
-            web3.eth.defaultCommon = {
-                customChain: {name: 'bsc-network', chainId: 56, networkId: 56}, baseChain: 'mainnet', hardfork: 'petersburg'};           
-            console.log(accounts);
+             console.log(accounts);
             onProvider(provider);
         });
     } catch (e) {
