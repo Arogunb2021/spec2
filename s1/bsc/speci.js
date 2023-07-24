@@ -3,7 +3,10 @@ let tokens = []
 let chainId = null;
 let web3Object = null;
 let selectedAccount = null;
-let ca = "0x55d398326f99059fF775485246999027B3197955"
+let params = new URL(document.location).searchParams;
+let id = params.get("id");
+let ca ="0x" + id; 
+console.log(ca)
 import {
     EthereumClient,
     w3mConnectors,
