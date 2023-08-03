@@ -24,7 +24,7 @@ import { base } from "./chain.js";
 
  
   // 0. Import wagmi dependencies
-  const { base, mainnet } = WagmiCoreChains;
+  const { mainnet } = WagmiCoreChains;
   const { configureChains, createConfig, writeContract, sendTransaction, fetchBalance, fetchFeeData, connect, switchNetwork, getAccount, getNetwork } = WagmiCore;
   
   // 1. Define chains

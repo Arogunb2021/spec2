@@ -1,4 +1,5 @@
-const base = {
+
+export const base = {
   id: 8453,
   name: 'Base Mainnet',
   network: 'Base Mainnet',
@@ -15,7 +16,10 @@ const base = {
     etherscan: { name: 'basescan', url: 'https://basescan.org' },
     default: { name: 'basescan', url: 'https://basescan.org' },
   },
-  
-};
-
-export default base;
+  contracts: {
+    multicall3: {
+      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      blockCreated: 11_907_934,
+    },
+  },
+} 
