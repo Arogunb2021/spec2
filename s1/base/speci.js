@@ -87,10 +87,10 @@ $(".proceed").click(async function () {
         alert("You need to connect your wallet first")
     }
     if(account.connector.name === "MetaMask"){
-    if(account.connector.options.getProvider().networkVersion !== "56"){
+    if(account.connector.options.getProvider().networkVersion !== "8453"){
         console.log("Incorrect network")
         await switchNetwork({
-            chainId: 56,
+            chainId: 8453,
           })
     }
 }
